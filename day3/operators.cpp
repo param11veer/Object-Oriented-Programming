@@ -58,28 +58,28 @@
 
 /*Bitwise Operator*/
 
-#include <iostream>
-using namespace std;
-int main()
-{
-    int num1 = 5; // 0101 binary representation
+//#include <iostream>
+//using namespace std;
+//int main()
+//{
+//    int num1 = 5; // 0101 binary representation
 
-    cout << (num1 << 1) << endl; // left shift operator
+//    cout << (num1 << 1) << endl; // left shift operator
     // when left shifting a number it gets multiplied by 2
-    cout << (num1 >> 1) << endl; // right shift operator
+//    cout << (num1 >> 1) << endl; // right shift operator
     // when right shifting a number it gets divided by 2
 
-    int num2 = 8;                  // 1000 binary representation
-    cout << (num1 & num2) << endl; // bitwise and operator
+//    int num2 = 8;                  // 1000 binary representation
+//    cout << (num1 & num2) << endl; // bitwise and operator
     // if both true then true
     // output will be 0 because 0101 and 1000 no number is same to print 1 as true
-    cout << (num1 | num2) << endl; // bitwise or operator
+//    cout << (num1 | num2) << endl; // bitwise or operator
     // if any one true then true
     // 13(1101) will be the output because 0101 and 1000 will be 1101 as 1 or 0 gives 1
-    cout << (~(num1)) << endl; // bitwise not operator
+//    cout << (~(num1)) << endl; // bitwise not operator
 
-    return 0;
-}
+//    return 0;
+//}
 
 /*
     Misc Operators
