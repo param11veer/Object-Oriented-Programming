@@ -21,9 +21,12 @@ int main()
     printf("Enter the date of birth :\n");
     scanf("%d%d%d", &s1.d1.day, &s1.d1.month, &s1.d1.year); // this is way to access the nested variables just like we access files over there we use / over here .
     printf("Date of birth is %d-%d-%d", s1.d1.day, s1.d1.month, s1.d1.year);
+    printf("DOB of %S having roll no %d is %d/%s/%d", s1.name, s1.id);
     return 0;
 }
 
+
+/*
 #include <stdio.h>
 #include <string.h>
 
@@ -47,3 +50,4 @@ int main()
     printf("Date of birth is %d-%d-%d", s1.d1.day, s1.d1.month, s1.d1.year);
     return 0;
 }
+*/
