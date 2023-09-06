@@ -151,8 +151,6 @@
 //     return 0;
 // }
 
-
-
 /*
     Write a program to copy the contents of one array to another in the reverse order
 */
@@ -169,9 +167,6 @@
 //     }
 //     return 0;
 // }
-
-
-
 
 /*
     Write a program to reverse the array without using any extra array
@@ -203,36 +198,122 @@
 
 // }
 
-
-
 /*
    Rotate the given array 'a' by K steps, where K is non-negative.
-   NOTE: K can be greater than n as well where n is the size of array 'a'.  
+   NOTE: K can be greater than n as well where n is the size of array 'a'.
 */
 
-#include<stdio.h>
+// #include<stdio.h>
 
-void reverse(int arr[], int si, int ei){ //si = start index and ei = end index
-    for (int i=si, j=ei; i<j; i++,j--){
-        int temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
-    }
-    return;
-}
+// void reverse(int arr[], int si, int ei){ //si = start index and ei = end index
+//     for (int i=si, j=ei; i<j; i++,j--){
+//         int temp = arr[i];
+//         arr[i] = arr[j];
+//         arr[j] = temp;
+//     }
+//     return;
+// }
 
+// int main()
+// {
+//     int arr[7] = {1,2,3,4,5,6,7};
+//     int n = 7;
+//     int k = 3;
+//     //steps
+//     k = k%n;//this is bcuz 7 element k array ko 7 time reverse krne pe same array hi aaega waaps so uska modulus means remainder nikaalenge to hmaare paas shi answer aaega
+//     reverse(arr,0,n-1);
+//     reverse(arr,0,k-1);
+//     reverse(arr,k,n-1);
+//     for (int i = 0; i <= 6; i++){
+//         printf("%d ",arr[i]);
+//     }
+//     return 0;
+// }
+
+/*
+    Given an array containing elements from 1 to 100 except one
+    element in this range is missing. Find the missing element
+
+    to solve this question pehle 1 to 100 tk ka sum nikaal lo
+    phir 1 to 99 tk ka sum nikaal lo then sum1 - sum2 krlo answer aajaega
+*/
+/*
+    first let's do a basic searching question
+    Given an array & a number 'x'. Find out if 'x' lies in the
+    array or not, if yes then print the index.
+*/
+
+// #include <stdio.h>
+// #include <stdbool.h> //using this header file so that we can use boolean data type in the code
+// int main()
+// {
+//     int arr[7] = {12, 21, 23, 52, 45, 65, 27};
+//     int x = 21;
+//     bool flag = false; // false means x is not present
+//     int index = -1;
+//     for (int i = 0; i <= 6; i++)
+//     {
+//         if (arr[i] == x)
+//         {
+//             flag = true;
+//             index = i;
+//             break;
+//         }
+//     }
+//     if (flag == false)
+//     {
+//         printf("%d is not present", x);
+//     }
+//     else
+//     {
+//         printf("%d is present amd it's index is %d", x,index);
+//     }
+//     return 0;
+// }
+
+/*
+    wap to find a duplicate element from a given array of integers.
+*/
+
+// #include<stdio.h>
+// int main(){
+//     int arr[7] = {1,2,7,4,5,6,7};
+//     for (int i=0;i<=6;i++){
+//         for (int j=i+1;j<=6;j++){
+//             if (arr[i]==arr[j]){
+//                 printf("%d is the duplicate element", arr[i]);
+//                 break;
+//             }
+//         }
+//     }
+//     return 0;
+// }
+
+/*
+    FInd the unique number in a given array where all the elements
+    are being repeated twice with one value being unique
+*/
+
+#include <stdio.h>
+#include <stdbool.h>
 int main()
 {
-    int arr[7] = {1,2,3,4,5,6,7};
-    int n = 7;
-    int k = 3;
-    //steps
-    k = k%n;//this is bcuz 7 element k array ko 7 time reverse krne pe same array hi aaega waaps so uska modulus means remainder nikaalenge to hmaare paas shi answer aaega
-    reverse(arr,0,n-1);
-    reverse(arr,0,k-1);
-    reverse(arr,k,n-1);
-    for (int i = 0; i <= 6; i++){
-        printf("%d ",arr[i]);
+    int arr[7] = {1, 3, 6, 1, 1, 2, 3};
+    for (int i = 0; i <= 6; i++)
+    {
+        bool flag = false;
+        for (int j = i + 1; j <= 6; j++)
+        {
+            if (arr[i] == arr[j])
+            {
+                flag = true;
+            }
+        }
+        if (flag == false)
+        {
+            printf("The unique number is :%d\n", arr[i]);
+            break;
+        }
     }
     return 0;
 }
