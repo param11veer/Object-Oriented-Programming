@@ -2,33 +2,33 @@
     Write a program to print the transpose of the matrix entered by the user
 */
 
-#include <stdio.h>
-int main()
-{
-    int r;
-    printf("Enter the number of rows : ");
-    scanf("%d", &r);
-    int c;
-    printf("\n Enter the number of columns:  ");
-    scanf("%d", &c);
-    printf("Enter all the elements\n");
-    int arr[r][c];
-    for (int i = 0; i < r; i++)
-    {
-        for (int j = 0; j < c; ++j)
-        {
-            scanf("%d", &arr[i][j]);
-        }
-    }
-    for (int i = 0; i < c; i++)
-    { // changing the limits here from r->c and c->r so that columns rows bn jaaye and rows column
-        for (int j = 0; j < r; j++)
-        {
-            printf("%d ", arr[j][i]);
-        }
-        printf("\n");
-    }
-}
+// #include <stdio.h>
+// int main()
+// {
+//     int r;
+//     printf("Enter the number of rows : ");
+//     scanf("%d", &r);
+//     int c;
+//     printf("\n Enter the number of columns:  ");
+//     scanf("%d", &c);
+//     printf("Enter all the elements\n");
+//     int arr[r][c];
+//     for (int i = 0; i < r; i++)
+//     {
+//         for (int j = 0; j < c; ++j)
+//         {
+//             scanf("%d", &arr[i][j]);
+//         }
+//     }
+//     for (int i = 0; i < c; i++)
+//     { // changing the limits here from r->c and c->r so that columns rows bn jaaye and rows column
+//         for (int j = 0; j < r; j++)
+//         {
+//             printf("%d ", arr[j][i]);
+//         }
+//         printf("\n");
+//     }
+// }
 
 /*
     WAP to change the given nxm matrix to its transpose
